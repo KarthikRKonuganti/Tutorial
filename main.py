@@ -282,7 +282,7 @@ def scraper(url, driver):
 
 def handler(event, context):
     s3 = boto3.client("s3")
-    bucket = "cliu789test"  # TODO: Modify it to your own s3 bucket
+    bucket = "tutorialbucketing12342312"  # TODO: Modify it to your own s3 bucket
 
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
@@ -297,7 +297,7 @@ def handler(event, context):
 
     url = "https://webapps.jacksonemc.com/nisc/maps/MemberOutageMap/"
 
-    data = scraper1(url, driver)  # TODO: Modify it to your own scraper()
+    data = scraper(url, driver)  # TODO: Modify it to your own scraper()
 
     driver.close()
     driver.quit()
